@@ -8,8 +8,8 @@ class Neurosets {
 	// Initiate analysis
 	public static void main(String args[]) {
 		CSVParser csvParser = new CSVParser();
-		csvParser.parseMetadata();
-		
+		csvParser.loadMetadata();
+		csvParser.loadMotifCounts();
 	}
 
 }

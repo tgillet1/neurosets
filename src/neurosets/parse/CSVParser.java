@@ -1,6 +1,6 @@
 package neurosets.parse;
 
-import java.io.FileFilter;
+import java.io.File;
 
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -14,6 +14,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * 
  * */
 public class CSVParser {
+	private File fileMotifCounts; // CSV file containing motif counts
+	private File fileMetadata; // Meta-data for each accession
 	
 	private FileNameExtensionFilter createFilter() {
 		// apply an implicit file-filter
@@ -23,25 +25,58 @@ public class CSVParser {
 	}
 	
 	// Loads a CSV file using a file-filter for screen anything not .csv
-	public void loadFile(String title) {
+	private File selectFile(String title) {
+		File csvFile = null; // the selected CSV file
 		JFileChooser chooser = new JFileChooser("./demo");
 		chooser.setDialogTitle(title);
 		chooser.setFileFilter(this.createFilter());
 		
 		// clause if the user selects a file
 		if (chooser.showOpenDialog(null) == 0) {
-			
+			csvFile = chooser.getSelectedFile();
 		}
+		
+		// return the selected CSV file
+		return csvFile;
 	}
 	
 	/**
-	 * Parse a CSV metadata file such that the following conditions are met:
-	 * 1) The first row are column names such that column number 2 ... N 
-	 * represent motifs. 2) Each row on column 1 must represent a unique ID
-	 * for a sequence. Please see demo motifs .csv file for more details.
+	 * Two CSV files are required: A meta-data file as well as a motif-count
+	 * file. Both files must be provided and successfully parsed.
 	 * */
-	public void parseMetadata() {
-		this.loadFile("Select CSV file containing motifs");
+	public void loadMetadata() {
+		// Simple string to indicate to the user what file is being sought
+		String dialogTitle = "Select CSV file containing meta-data";
+		File fileMetadata = this.selectFile(dialogTitle);
+		this.setFileMetadata(fileMetadata);
+	}
+	
+	/**
+	 * Load the CSV which contains motif-counts. These counts represent
+	 * branch-lengths across a tree given a specific motif. Such counts pertain
+	 * to specific accessions. See motif CSV for detailed data organization.
+	 * */
+	public void loadMotifCounts() {
+		// Select only the CSV containing motif counts
+		String dialogTitle = "Select motif-counts file";
+		File fileMotifCounts = this.selectFile(dialogTitle);
+		this.setFileMotifCounts(fileMotifCounts);
+	}
+
+	public File getFileMetadata() {
+		return fileMetadata;
+	}
+
+	private void setFileMetadata(File fileMetadata) {
+		this.fileMetadata = fileMetadata;
+	}
+
+	public File getFileMotifCounts() {
+		return fileMotifCounts;
+	}
+
+	private void setFileMotifCounts(File fileMotifCounts) {
+		this.fileMotifCounts = fileMotifCounts;
 	}
 
 }
