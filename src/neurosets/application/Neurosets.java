@@ -10,6 +10,7 @@ class Neurosets {
 		CSVParser csvParser = new CSVParser();
 		csvParser.loadMetadata();
 		csvParser.loadMotifCounts();
+		System.out.println(csvParser.isSanitized());
 	}
 
 }

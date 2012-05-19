@@ -3,6 +3,7 @@ package neurosets.parse;
 import java.io.File;
 
 import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -17,10 +18,9 @@ public class CSVParser {
 	private File fileMotifCounts; // CSV file containing motif counts
 	private File fileMetadata; // Meta-data for each accession
 	
-	private FileNameExtensionFilter createFilter() {
-		// apply an implicit file-filter
-		FileNameExtensionFilter filter = new FileNameExtensionFilter(
-				"CSV file (*.csv)", "csv");
+	// Apply an implicit file-filter so that only CSV files can be selected
+	private FileFilter createFilter() {
+		FileFilter filter = new FileNameExtensionFilter("CSV file", "csv");
 		return filter;
 	}
 	
@@ -30,6 +30,7 @@ public class CSVParser {
 		JFileChooser chooser = new JFileChooser("./demo");
 		chooser.setDialogTitle(title);
 		chooser.setFileFilter(this.createFilter());
+		chooser.setAcceptAllFileFilterUsed(false); // choose only CSV files
 		
 		// clause if the user selects a file
 		if (chooser.showOpenDialog(null) == 0) {
@@ -61,6 +62,22 @@ public class CSVParser {
 		String dialogTitle = "Select motif-counts file";
 		File fileMotifCounts = this.selectFile(dialogTitle);
 		this.setFileMotifCounts(fileMotifCounts);
+	}
+	
+	/**
+	 * Determines whether the selected CSV files are valid or not; useful
+	 * since both motif counts and meta-data must be provided for any project.
+	 * 
+	 * @return boolean representing validity of the selected CSV files
+	 * */
+	public boolean isSanitized() {
+		if ((this.getFileMetadata() != null) && 
+				(this.getFileMotifCounts() != null)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public File getFileMetadata() {
