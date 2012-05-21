@@ -103,16 +103,22 @@ public class CSVParser {
 		// compute #/lines in motif-counts
 		int numRows = this.getNumRowsFile(file);
 		int numCols = this.getNumColumnsFile(file);
-		
-		System.out.println(numRows+" rows, " + numCols+ " columns in motif");
+
+		System.out.println(numRows+" rows, " + numCols+ " columns in motif CSV");
 		// the new dataset to produce
 		CSVDataset dataset = new CSVDataset();
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		String eachLine = "";
 		while ((eachLine = reader.readLine()) != null) {
-			//			System.out.println("parsing counts " + eachLine);
+			// iterate through each column in every row
+			String[] column = eachLine.split(",");
+			for (int i = 0; i < column.length; i++) {
+				System.out.print(column[i]+"\t");
+				
+			}
+			System.out.println();
 		}
-		
+
 		return dataset;
 	}
 

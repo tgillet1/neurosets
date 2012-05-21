@@ -1,8 +1,12 @@
 package neurosets.accession;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CSVDataset {
 	private int numCols;
 	private int numRows;
+	private List<String> headers; // first line of the CSV file
 	
 	/**
 	 * CSV File objects which are parsed are encapsulated in a CSVDataset
@@ -10,7 +14,7 @@ public class CSVDataset {
 	 * states to delve into its row and column values.
 	 * */
 	public CSVDataset() {
-		
+		this.setHeaders(new ArrayList<String>());
 	}
 	
 	/**
@@ -36,6 +40,20 @@ public class CSVDataset {
 	 */
 	public void setNumRows(int numRows) {
 		this.numRows = numRows;
+	}
+
+	/**
+	 * @return the headers
+	 */
+	public List<String> getHeaders() {
+		return headers;
+	}
+
+	/**
+	 * @param headers the headers to set
+	 */
+	private void setHeaders(List<String> headers) {
+		this.headers = headers;
 	}
 
 }
