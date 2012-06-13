@@ -1,0 +1,122 @@
+ArborType:Axon/Order:Rodent/Class2:Pyramidal cell
+>BrainRegion:Cortex,Hippocampus
+
+ArborType:Axon/Order:Rodent/BrainRegion:Neocortex/Class2:Pyramidal cell
+>CorticalRegion:Somatosensory,Visual
+
+ArborType:Axon/Order:Rodent/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Species:Mouse,Rat
+
+ArborType:Axon/Order:Rodent/AgeClass:Young/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Species:Mouse,Rat
+
+ArborType:Axon/Order:Rodent/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Layer:Layer 4,Layer 5,Layer 2/3 
+
+ArborType:Axon/Order:Rodent/AgeClass:Young/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Layer:Layer 4,Layer 5,Layer 2/3
+
+ArborType:Axon/Order:Rodent/AgeClass:Young/BrainRegion:Neocortex/Region2:Somatosensory/Class2:Pyramidal cell by Layer
+>Layer:Layer 4,Layer 5
+
+ArborType:Axon/BrainRegion:Neocortex/Class2:Pyramidal cell/Region2:Somatosensory
+>Species:Rat, Mouse
+
+ArborType:Axon/Order:Rodent/Class1:Interneuron
+>Class2:Parvalbumin (PV) containing cell&Basket cell,Martinotti cell&Somatostatin (SOM) containing cell
+
+ArborType:Axon/Order:Rodent/Class1:Interneuron
+>Class2:Parvalbumin (PV) containing cell,Basket cell,Martinotti cell&Somatostatin (SOM) containing cell
+
+ArborType:Axon/Species:Drosophila/BrainRegion:Olfactory bulb/Class2:Uniglomerular projection neuron/Class3:iPN
+>AgeClass:Larval,Embryonic
+
+ArborType:ApicalDendrite/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Order:Rodent,Primate,Proboscidae
+
+ArborType:ApicalDendrite/BrainRegion:Neocortex/AgeClass:Adult/Class2:Pyramidal cell
+>Order:Rodent,Primate,Proboscidae
+
+ArborType:ApicalDendrite/BrainRegion:Neocortex/AgeClass:Young/Class2:Pyramidal cell
+>Order:Rodent,Primate
+
+ArborType:ApicalDendrite/Order:Rodent/Class2:Pyramidal cell
+>BrainRegion:Neocortex,Hippocampus,Anterior olfactory nucleus
+
+ArborType:ApicalDendrite/Order:Rodent/AgeClass:Young/Class2:Pyramidal cell
+>BrainRegion:Neocortex,Hippocampus,Anterior olfactory nucleus
+
+ArborType:ApicalDendrite/Order:Rodent/BrainRegion:Neocortex/Class2:Pyramidal cell
+>CorticalRegion:Somatosensory,Visual,Frontal lobe
+
+ArborType:ApicalDendrite/Order:Rodent/BrainRegion:Neocortex/Layer:Layer 2,3/Class2:Pyramidal cell
+>CorticalRegion:Somatosensory,Frontal lobe
+
+ArborType:ApicalDendrite/Order:Rodent/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Layer:Layer 5,Layer 4,Layer 2/3
+
+ArborType:ApicalDendrite/Order:Rodent/BrainRegion:Neocortex/Region2:Somatosensory/Class2:Pyramidal cell
+>Layer:Layer 5,Layer 4,Layer 2/3
+
+ArborType:ApicalDendrite/Order:Rodent/BrainRegion:Neocortex/Class2:Pyramidal cell
+>AgeClass:Young,Adult
+
+ArborType:ApicalDendrite/Order:Primate/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Species:Monkey,Human
+
+ArborType:ApicalDendrite/Order:Primate/BrainRegion:Neocortex/Class2:Pyramidal cell
+>AgeClass:Adult,Young,Old
+
+ArborType:ApicalDendrite/Order:Primate/BrainRegion:Neocortex/Layer:Layer 2,3/Class2:Pyramidal cell
+>CorticalRegion:Prefrontal,Inferior frontal gyrus,Temporal sulcus
+
+ArborType:ApicalDendrite/Species:Monkey/AgeClass:Adult/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Class3:Ipsilateral-projecting, Callosal-projecting
+
+ArborType:Dendrite/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Order:Primate,Rodent,Proboscidae
+
+ArborType:Dendrite/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Species:Human,Monkey,Rat,Mouse,Elephant
+
+ArborType:Dendrite/BrainRegion:Neocortex/Layer:Layer 2,3/Class2:Pyramidal cell
+>Order:Primate,Rodent,Proboscidae
+
+ArborType:Dendrite/BrainRegion:Neocortex/Layer:Layer 2,3/Class2:Pyramidal cell
+>Species:Human,Monkey,Rat,Mouse,Elephant
+
+ArborType:Dendrite/Species:Human/BrainRegion:Neocortex/Class2:Pyramidal cell
+>AgeClass:Adult,Neonate
+	
+ArborType:Dendrite/Species:Human/BrainRegion:Neocortex/Class2:Pyramidal cell
+>Gender:Male,Female
+
+ArborType:Dendrite/Species:Human/BrainRegion:Neocortex/Layer:Layer 2,3/Class2:Pyramidal cell
+>CorticalLobe:Insula,Frontal,Temporal
+
+ArborType:Dendrite/Species:Human/BrainRegion:Neocortex/Layer:Layer 2,3/Class2:Pyramidal cell
+>CorticalRegion:Anterior long insular gyrus,Posterior short insular gyrus,Middle short insular gyrus,	Inferior frontal gyrus,Prefrontal,Temporal sulcus
+
+ArborType:Dendrite/Order:Rodent/BrainRegion:Neocortex/Region2:Somatosensory/Class2:Pyramidal cell
+>Layer:Layer 2/3,Layer 4,Layer 5
+
+ArborType:Dendrite/Order:Rodent/BrainRegion:Neocortex/Layer:Layer 2,3/Class2:Pyramidal cell
+>CorticalRegion:Somatosensory,Frontal lobe,Visual
+
+ArborType:Dendrite/Order:Rodent/AgeClass:Young/BrainRegion:Neocortex/Region2:Somatosensory/Layer:Layer 4/Class2:Pyramidal cell
+>Species:Mouse,Rat
+
+ArborType:Dendrite/BrainRegion:Retina/Class2:Ganglion cell
+>Species:Mouse,Salamander,Goldfish	
+
+ArborType:Dendrite/Order:Rodent/BrainRegion:Neocortex
+>Class2:Pyramidal cell,Parvalbumin (PV) containing cell,Basket cell,Martinotti cell&Somatostatin (SOM) containing cell
+
+ArborType:Dendrite/Order:Rodent/BrainRegion:Neocortex
+>Class2:Pyramidal cell,Parvalbumin (PV) containing cell&Basket cell,Martinotti cell&Somatostatin (SOM) containing cell
+
+ArborType:Dendrite/Species:Rat/BrainRegion:Hippocampus/Class2:Granule cell
+>AgeClass:Young,Adult
+
+ArborType:Dendrite/Class2:Motoneuron
+>BrainRegion:Spinal cord, Brainstem
